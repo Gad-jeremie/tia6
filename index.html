@@ -1,0 +1,260 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  
+<title>Tia</title>   
+</head>
+<style type="text/css">
+
+.Searcho{
+position: absolute;
+padding: 1.53em;
+right: .43em;
+top: .4em;
+border-radius: 100%;
+background: rgba(232,172,108, 0.17);
+}
+
+.Searcho:hover{
+background:rgba(174,116,54, 0.19);  
+}
+
+.Search-box {
+float: right;
+width: 230px;
+height: 100%;
+border: 1px solid transparent;
+position: absolute;
+outline: 0;
+background: #eee;
+right: -.1em;
+padding: .1em  0.75rem;
+top: -.1em;
+font-style: italic;
+-webkit-transform: translateY(-100%);
+transform: translateY(-100%);
+opacity: 0;
+-webkit-transition: -webkit-transform ease 100ms;transition: -webkit-transform ease 100ms;
+transition: transform ease 100ms;
+transition: transform ease 100ms, -webkit-transform ease 100ms;
+}
+.Search-box:focus {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
+}
+.Search-box:focus + .Search-box-label {
+z-index: -1;
+opacity: 0;
+}
+.Search-box:focus ~ .Search-close {
+z-index: 3;
+opacity: 1;
+}
+
+.Search-box-label,
+.Search-close {
+position: absolute;
+right: 0;
+z-index: 2;
+cursor: pointer;
+height: 100%;
+width: 3rem;
+-webkit-transition: opacity ease 250ms 250ms;
+transition: opacity ease 250ms 250ms;
+}
+
+.Search-close {
+opacity: 0;
+z-index: 0;
+}
+
+.Search-icon,
+.Search-close-icon {
+position: absolute;
+top: .1em;
+left: 2.6em;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 22 22' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><defs><path fill='#6a300a' d='M15.477 13.356C16.437 11.98 17 10.306 17 8.5 17 3.806 13.194 0 8.5 0S0 3.806 0 8.5 3.806 17 8.5 17c1.805 0 3.48-.563 4.855-1.522l6.304 6.303c.114.12.3.12.42 0l1.7-1.696c.116-.116.11-.31 0-.423l-6.305-6.303zM8.5 15c3.59 0 6.5-2.91 6.5-6.5S12.09 2 8.5 2 2 4.91 2 8.5 4.91 15 8.5 15z' id='a'/></defs><g fill='#6a300a' fill-rule='evenodd'><use xlink:href='#a'/></g></svg>");
+}
+
+.Search-close-icon {
+background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path fill='#6a300a' d='M77.6 21.1l-28 28.1-28.1-28.1-1.9 1.9 28 28.1-28 28.1 1.9 1.9L49.6 53l28 28.1 2-1.9-28.1-28.1L79.6 23z'/></svg>");
+}
+
+.Searcho {
+content: "";
+display: table;
+clear: both;
+}
+
+.Search-icon,
+.Search-close-icon {
+text-indent: 100%;
+overflow: hidden;
+}
+
+.Search-icon,
+.Search-close-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+}
+</style>
+
+    <body>
+
+
+    <div class="container">
+  
+
+
+    <header class="slideRight">
+    <!-- gray overlay -->
+	<div id="wrapperx">
+
+
+	</div>
+
+    <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+    <ul id="navToggle" class="burger slideRight">
+
+    <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+    <li></li>
+    <li></li>
+    <li></li>
+    </ul>
+
+
+    <div id= "menuicon"> 
+
+    <span id="carticon"><a href="#">
+    <!-- svg -->
+    <img src="images/carticon.svg">
+    </a></span>
+
+
+    <span id="usericon"><a href="#">
+    <!-- svg -->
+    <img class="usericon" src="images/usericon.svg">
+    </a>
+    </span> 
+      <form class="Searcho">
+  <input type="search" class="Search-box" name="Search-box" id="Search-box" placeholder="Search this site...">
+  <label for="Search-box" class="Search-box-label">
+    <span class="Search-icon">Search</span>
+  </label>
+  <span class="Search-close">
+    <i class="Search-close-icon">Close</i>
+  </span>
+</form>             
+
+    </div>
+
+    <!-- drop --> 
+
+    <!-- desktop logo -->
+    <div id="logodesktop"><img class="logodesk" src="images/logo.png"></div>
+
+    </header>
+
+
+
+    <nav class="slideLeft">
+
+    <ul>
+    <li id="brand"></li>
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="#">Petit dej</a></li>
+    <li><a href="#">Desserts</a></li>
+    <li><a href="#">Plats</a></li>
+    <li><a href="#">En restau</a></li>
+    <li><a href="#">Revues</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Paquets</a></li>
+
+
+    </ul>
+    </nav>
+
+
+    <span class="go-top"> 
+    <a href="#">
+    <!-- svg -->
+    <img src="images/backtop.svg">
+    </a>
+    </span>
+
+
+ <div class="content slideRight">
+    <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+
+    <ul class="responsive">
+
+	<div id="wrapperxbody">
+
+	<!-- gray overlay -->
+	</div> 
+ 
+  <div class="main">
+
+  <img src="images/Penguins.jpg" width="100%">
+  <!-- <p>g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf
+ isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf  g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf g gid afij dfknnzdjn asdjfnsadf kjafdfg kjasfhfiouanssfiuunas iausf ijasff giou isfjnioa iounarg fiu fig idaf
+ </p> -->
+
+  </div>
+
+   
+    </ul>
+    
+ </div>
+    <!-- wrapperx rgba .4-->
+    </div>
+    </body>
+    </html>   
+
+    <script  src="js/index.js"></script>
+    <script type="text/javascript">
+
+
+    /*scroll to top*/
+    $(document).ready(function() {
+    // Show or hide the sticky footer button
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+    $('.go-top').fadeIn(200);
+    } else {
+    $('.go-top').fadeOut(200);
+    }
+    });
+
+    // Animate the scroll to top
+    $('.go-top').click(function(event) {
+    event.preventDefault();
+
+    $('html, body').animate({scrollTop: 0}, 300);
+    })
+
+
+
+    });
+
+
+    </script>
+
+
