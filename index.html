@@ -106,10 +106,17 @@ overflow: hidden;
 
 .Search-icon,
 .Search-close-icon {
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-repeat: no-repeat;
+display: block;
+width: 18px;
+height: 18px;
+background-repeat: no-repeat;
+}
+
+input[type="search"]::-webkit-appearance:none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+display: none;
 }
 </style>
 
@@ -151,7 +158,7 @@ overflow: hidden;
     </a>
     </span> 
       <form class="Searcho">
-  <input type="text" class="Search-box" name="Search-box" id="Search-box" placeholder="Search this site...">
+  <input type="search" class="Search-box" name="Search-box" id="Search-box" placeholder="Search this site...">
   <label for="Search-box" class="Search-box-label">
     <span class="Search-icon">Search</span>
   </label>
@@ -251,4 +258,5 @@ overflow: hidden;
     });
 
     </script>
+
 
