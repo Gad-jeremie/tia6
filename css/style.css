@@ -164,11 +164,11 @@ background-repeat: no-repeat;
 	}
 
 	#Searcho{
-	right: .8em;
+	right: 1em;
 	}
 
 	#usericon{     
-    right: 5.05em;
+    right: 5.25em;
     }
     
     #usericon img,#carticon img{
@@ -198,7 +198,7 @@ background-repeat: no-repeat;
 	}
 
     #carticon{     
-    right: 9.3em;
+    right: 9.5em;
     }
      
     .go-top {
